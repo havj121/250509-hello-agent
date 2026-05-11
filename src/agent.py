@@ -51,6 +51,8 @@ def run_agent(user_input: str, llm, tavily_api_key: str = "", max_rounds: int = 
         if not action_str:
             print("模型输出中未找到 Action，结束。")
             break
+        else:
+            print(f"动作解析结果: {action_str}")
 
         # finish → 输出最终答案
         if action_str.startswith("finish"):

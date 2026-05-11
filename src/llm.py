@@ -4,7 +4,7 @@ from openai import OpenAI
 class DeepSeekClient:
     """通过 OpenAI SDK 调用 DeepSeek API（DeepSeek 官方推荐方式）"""
 
-    def __init__(self, api_key: str, base_url: str = "https://api.deepseek.com", model: str = "deepseek-chat"):
+    def __init__(self, api_key: str, base_url: str = "https://api.deepseek.com", model: str = "deepseek-v4-flash"):
         self.model = model
         self.client = OpenAI(api_key=api_key, base_url=base_url)
 
